@@ -1,0 +1,53 @@
+<!--part one -->
+<section ng-init="formData.a1" id="q1-form">
+    <pre style='color:#000000;background:#ffffff;'><span
+        style='color:#7f0055; font-weight:bold; '>public</span> <span style='color:#7f0055; font-weight:bold; '>static</span> int foo(int n){
+        n = 5;
+        <span style='color:#7f0055; font-weight:bold; '>return</span> n;
+}
+<span style='color:#7f0055; font-weight:bold; '>public</span> <span
+                    style='color:#7f0055; font-weight:bold; '>static</span> void fooBar(int n){
+        n = 10;
+}
+
+<span style='color:#7f0055; font-weight:bold; '>public</span> <span
+                style='color:#7f0055; font-weight:bold; '>static</span> void main(String[] args){
+    <span style='color:#7f0055; font-weight:bold; '>int</span> n = 10;
+    n = foo(n);
+    <span style='color:#7f0055; font-weight:bold; '>System</span>.out.println(n);
+    fooBar(n);
+    <span style='color:#7f0055; font-weight:bold; '>System</span>.out.println(n);
+    }
+}
+    </pre>
+    <div class="radio well well-sm">
+        <label>
+            <input type="radio" name="a1" value="5,5" ng-model="formData.a1" checked>
+            5, 5
+        </label>
+    </div>
+    <div class="radio well well-sm">
+        <label>
+            <input type="radio" name="a1" value="10,5" ng-model="formData.a1">
+            10, 5
+        </label>
+    </div>
+    <div class="radio well well-sm">
+        <label>
+            <input type="radio" name="a1" value="10,10" ng-model="formData.a1">
+            10, 10
+        </label>
+    </div>
+    <div class="radio well well-sm">
+        <label>
+            <input type="radio" name="a1" value="5, 10" ng-model="formData.a1">
+            5, 10
+        </label>
+    </div>
+    <div class="row">
+        <button type="button" id="q1" class="btn btn-default btn-success">Check Answer</button>
+        <a ui-sref="form.part-two" class="btn btn-primary">Next
+            <span class="glyphicon glyphicon-circle-arrow-right"></span>
+        </a>
+    </div>
+</section>

@@ -1,0 +1,48 @@
+body {
+  padding-top: 20px;
+}
+
+#form-container {
+  margin-bottom: 20px;
+  border-radius: 5px;
+  .page-header {
+    margin: 0;
+    padding: 30px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+}
+
+#status-buttons {
+  a {
+    display: inline-block;
+    font-size: 12px;
+    margin-right: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    &:hover {
+      text-decoration: none;
+    }
+    &.active {
+      span {
+        //change the background color
+
+      }
+    }
+  }
+  span {
+    display: block;
+    height: 30px;
+    margin: 0 auto 10px;
+    padding-top: 5px;
+    width: 30px;
+    border-radius: 50%;
+  }
+}
+
+.well-red {
+  background-color: red;
+}
+.well-green {
+  background-color: forestgreen;
+}

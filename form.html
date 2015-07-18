@@ -1,0 +1,26 @@
+<div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+        <div id="form-container">
+            <div class="page-header text-center">
+                <h2>Senior Web Developer Quiz</h2>
+
+                <!--the links to our nested states -->
+                <!-- add the active class if the state matches the ui-sref -->
+                <div id="status-buttons" class="text-center">
+                    <a ui-sref-active="active" ui-sref=".part-one">Level 1</a>
+                    <a ui-sref-active="active" ui-sref=".part-two">Level 2</a>
+                    <a ui-sref-active="active" ui-sref=".part-three">Level 3</a>
+                </div>
+            </div>
+            <!-- use ng-submit to catch the submission and pass it to the angular function -->
+            <form id="quiz-form">
+                <!--nested view -->
+                <div id="form-views" ui-view>
+                    <div class="text-center">
+                        <a ui-sref="form.part-one" class="btn btn-lg btn-default btn-primary">Begin!</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+{
+  "name": "InterviewQuiz",
+  "version": "1.0.0",
+  "authors": [
+    "Steven Silvestri <steven.m.silvestri@gmail.com>"
+  ],
+  "description": "Senior Web Application Developer Quiz",
+  "main": "index.html",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "ui-router": "~0.2.15",
+    "angular-animate": "~1.4.3",
+    "fontawesome": "~4.3.0"
+  }
+}

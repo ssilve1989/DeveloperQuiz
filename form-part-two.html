@@ -1,0 +1,53 @@
+<section id="q2-form">
+    <pre style='color:#000000;background:#ffffff;'><span style='color:#7f0055; font-weight:bold; '>public</span> <span style='color:#7f0055; font-weight:bold; '>static</span> void main(String[] args){
+    <span style='color:#7f0055; font-weight:bold; '>String</span> one = <span style='color:#2a00ff; '>"s"</span>;
+    <span style='color:#7f0055; font-weight:bold; '>String</span> two = <span style='color:#7f0055; font-weight:bold; '>new</span> <span style='color:#7f0055; font-weight:bold; '>String</span>(<span style='color:#2a00ff; '>"s"</span>);
+    <span style='color:#7f0055; font-weight:bold; '>String</span> three = <span style='color:#2a00ff; '>"s"</span>;
+    StringBuilder four = <span style='color:#7f0055; font-weight:bold; '>new</span> StringBuilder(<span style='color:#2a00ff; '>"s"</span>);
+
+    <span style='color:#7f0055; font-weight:bold; '>System</span>.out.println(one == two);
+    <span style='color:#7f0055; font-weight:bold; '>System</span>.out.println(one.equals(two));
+    <span style='color:#7f0055; font-weight:bold; '>System</span>.out.println(one == three);
+    <span style='color:#7f0055; font-weight:bold; '>System</span>.out.println(one.equals(three));
+    <span style='color:#7f0055; font-weight:bold; '>System</span>.out.println(one.equals(four));
+    <span style='color:#7f0055; font-weight:bold; '>System</span>.out.println(one.contentEquals(four));
+}
+    </pre>
+    <div class="radio well well-sm">
+        <label>
+            <input type="radio" name="q2-radio" value="true,true,true,true,false,true">
+            true,true,true,true,false,true
+        </label>
+    </div>
+    <div class="radio well well-sm">
+        <label>
+            <input type="radio" name="q2-radio" value="true,true,true,true,false,false">
+            true,true,true,true,false,false
+        </label>
+    </div>
+    <div class="radio well well-sm">
+        <label>
+            <input type="radio" name="q2-radio" value="false,true,true,false,true">
+            false,true,true,false,true
+        </label>
+    </div>
+    <div class="radio well well-sm">
+        <label>
+            <input type="radio" name="q2-radio" value="true,false,true,false,true,false">
+            true,false,true,false,true,false
+        </label>
+    </div>
+    <div class="radio well well-sm">
+        <label>
+            <input type="radio" name="q2-radio" value="true,false,true,false,true,true">
+            true,false,true,false,true,true
+        </label>
+    </div>
+    <div class="row">
+        <button id="q2" class="btn btn-default btn-success">Check Answer</button>
+        <a ui-sref="form.part-three" class="btn btn-default btn-primary">
+            Next
+            <span class="glyphicon glyphicon-circle-arrow-right"></span>
+        </a>
+    </div>
+</section>

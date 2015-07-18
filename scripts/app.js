@@ -1,0 +1,40 @@
+/**
+ * Created by steve on 7/18/15.
+ */
+//Create module and inject animate and ui-router
+angular.module('formApp', ['ngAnimate', 'ui.router'])
+
+//Configure routes
+    .config(function ($stateProvider, $urlRouterProvider) {
+        $stateProvider
+            //route to show basic form
+            .state('form', {
+                url: '/form',
+                templateUrl: 'form.html',
+                controller: 'formController'
+            })
+            //nested states
+            //each of these will have their own view
+            //url will be nested (/form/part-one)
+            .state('form.part-one', {
+                url: '/part-one',
+                templateUrl: 'form-part-one.html'
+            })
+            .state('form.part-two', {
+                url : '/part-two',
+                templateUrl : 'form-part-two.html'
+            })
+            .state('form.part-three', {
+                url : '/part-three',
+                templateUrl : 'form-part-three.html'
+            });
+        $urlRouterProvider.otherwise('/form');
+    })
+
+    //controller for the form
+    .controller('formController', function($scope){
+        $scope.formData = {}
+        $scope.processForm = function(){
+
+        }
+    });
