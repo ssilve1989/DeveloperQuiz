@@ -4,30 +4,30 @@
     </pre>
     <div class="radio well">
         <label>
-            <input type="radio" name="q3-radio">
+            <input type="radio" name="q3-radio" value="O(n)"  ng-model="q3" checked>
             O(n)
         </label>
     </div>
     <div class="radio well">
         <label>
-            <input type="radio" name="q3-radio">
+            <input type="radio" name="q3-radio" value="O(1)" ng-model="q3">
             O(1)
         </label>
     </div>
     <div class="radio well">
         <label>
-            <input type="radio" name="q3-radio">
+            <input type="radio" name="q3-radio" value="O(n^2)" ng-model="q3">
             O(n<sup>2</sup>)
         </label>
     </div>
     <div class="radio well">
         <label>
-            <input type="radio" name="q3-radio">
+            <input type="radio" name="q3-radio" value="O(log n)" ng-model="q3">
             O(log n)
         </label>
     </div>
     <div class="row">
-        <button id="q3" class="btn btn-default btn-success">Check Answer</button>
+        <button id="q3" class="btn btn-default btn-success" ng-click="checkAnswer('q3', q3)">Check Answer</button>
         <a ui-sref="form.part-four" class="btn btn-default btn-primary">
             Next
             <span class="glyphicon glyphicon-circle-arrow-right"></span>

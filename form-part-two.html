@@ -15,36 +15,36 @@
     </pre>
     <div class="radio well well-sm">
         <label>
-            <input type="radio" name="q2-radio" value="true,true,true,true,false,true">
+            <input type="radio" name="q2-radio" value="true,true,true,true,false,true" ng-model="q2">
             true,true,true,true,false,true
         </label>
     </div>
     <div class="radio well well-sm">
         <label>
-            <input type="radio" name="q2-radio" value="true,true,true,true,false,false">
+            <input type="radio" name="q2-radio" value="true,true,true,true,false,false"  ng-model="q2">
             true,true,true,true,false,false
         </label>
     </div>
     <div class="radio well well-sm">
         <label>
-            <input type="radio" name="q2-radio" value="false,true,true,false,true">
+            <input type="radio" name="q2-radio" value="false,true,true,true,false,true"  ng-model="q2">
             false,true,true,false,true
         </label>
     </div>
     <div class="radio well well-sm">
         <label>
-            <input type="radio" name="q2-radio" value="true,false,true,false,true,false">
+            <input type="radio" name="q2-radio" value="true,false,true,false,true,false"  ng-model="q2">
             true,false,true,false,true,false
         </label>
     </div>
     <div class="radio well well-sm">
         <label>
-            <input type="radio" name="q2-radio" value="true,false,true,false,true,true">
+            <input type="radio" name="q2-radio" value="true,false,true,false,true,true"  ng-model="q2">
             true,false,true,false,true,true
         </label>
     </div>
     <div class="row">
-        <button id="q2" class="btn btn-default btn-success">Check Answer</button>
+        <button id="q2" class="btn btn-default btn-success" ng-click="checkAnswer('q2', q2)">Check Answer</button>
         <a ui-sref="form.part-three" class="btn btn-default btn-primary">
             Next
             <span class="glyphicon glyphicon-circle-arrow-right"></span>

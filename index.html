@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mount Sinai - Senior Web Application Interview Quiz</title>
+    <base href="/">
     <!-- build:css styles/vendor.css -->
     <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
@@ -11,15 +12,23 @@
     <link rel="stylesheet" href="styles/style.css">
 
     <!-- build:js scripts/vendor.js -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/angularjs/angular.min.js"></script>
     <script src="bower_components/ui-router/release/angular-ui-router.min.js"></script>
     <script src="bower_components/angular-animate/angular-animate.min.js"></script>
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <!-- endbuild -->
     <script src="scripts/app.js"></script>
-    <script src="scripts/quiz.js"></script>
 </head>
 <body ng-app="formApp">
+    <header>
+        <div class="navbar navbar-default">
+            <div class="navbar-header">
+                <div class="navbar-brand">
+                    <a href="/form">Super Amazing Quiz</a>
+                </div>
+            </div>
+        </div>
+    </header>
     <div class="container">
 
         <!-- views injected here -->

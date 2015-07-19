@@ -1,5 +1,5 @@
 <!--part one -->
-<section ng-init="formData.a1" id="q1-form">
+<section id="q1-form">
     <pre style='color:#000000;background:#ffffff;'><span
         style='color:#7f0055; font-weight:bold; '>public</span> <span style='color:#7f0055; font-weight:bold; '>static</span> int foo(int n){
         n = 5;
@@ -22,30 +22,30 @@
     </pre>
     <div class="radio well well-sm">
         <label>
-            <input type="radio" name="a1" value="5,5" ng-model="formData.a1" checked>
+            <input type="radio" name="a1" value="5,5" ng-model="q1" checked>
             5, 5
         </label>
     </div>
     <div class="radio well well-sm">
         <label>
-            <input type="radio" name="a1" value="10,5" ng-model="formData.a1">
+            <input type="radio" name="a1" value="10,5" ng-model="q1">
             10, 5
         </label>
     </div>
     <div class="radio well well-sm">
         <label>
-            <input type="radio" name="a1" value="10,10" ng-model="formData.a1">
+            <input type="radio" name="a1" value="10,10" ng-model="q1">
             10, 10
         </label>
     </div>
     <div class="radio well well-sm">
         <label>
-            <input type="radio" name="a1" value="5, 10" ng-model="formData.a1">
+            <input type="radio" name="a1" value="5, 10" ng-model="q1">
             5, 10
         </label>
     </div>
     <div class="row">
-        <button type="button" id="q1" class="btn btn-default btn-success">Check Answer</button>
+        <button type="button" id="q1" class="btn btn-default btn-success" ng-click="checkAnswer('q1', q1)">Check Answer</button>
         <a ui-sref="form.part-two" class="btn btn-primary">Next
             <span class="glyphicon glyphicon-circle-arrow-right"></span>
         </a>

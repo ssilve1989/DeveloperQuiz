@@ -3,9 +3,8 @@
  */
 //Create module and inject animate and ui-router
 angular.module('formApp', ['ngAnimate', 'ui.router'])
-
 //Configure routes
-    .config(function ($stateProvider, $urlRouterProvider) {
+    .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
         $stateProvider
             //route to show basic form
             .state('form', {
@@ -29,12 +28,27 @@ angular.module('formApp', ['ngAnimate', 'ui.router'])
                 templateUrl : 'form-part-three.html'
             });
         $urlRouterProvider.otherwise('/form');
+        
+        $locationProvider.html5Mode(true);
     })
 
     //controller for the form
-    .controller('formController', function($scope){
-        $scope.formData = {}
-        $scope.processForm = function(){
-
-        }
-    });
+    .controller('formController', ['$scope', '$http', function($scope, $http){
+        $scope.formData = {};
+        $scope.quiz = {};
+        $http.get('data/questions.json').success(function(data){
+            $scope.quiz = data;
+        });
+        $scope.quiz.score = function(){
+            return $scope.quiz.questions.correct / $scope.quiz.questions.totalQuestions;
+        };
+        $scope.checkAnswer = function(question, answer){
+            var $radios = $('.radio');
+            var $selected = $radios.find('input[type="radio"]:checked');
+            if(answer === $scope.quiz.questions[question].answer){
+                $selected.parents('.radio').addClass('well-green');
+            }else{
+                $selected.parents('.radio').addClass('well-red');
+            }
+        };
+    }]);

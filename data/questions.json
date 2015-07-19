@@ -1,0 +1,15 @@
+{
+  "questions": {
+    "totalQuestions": 4,
+    "correct" : 0,
+    "q1": {
+      "answer": "5,5"
+    },
+    "q2": {
+      "answer": "false,true,true,true,false,true"
+    },
+    "q3": {
+      "answer": "O(n)"
+    }
+  }
+}
