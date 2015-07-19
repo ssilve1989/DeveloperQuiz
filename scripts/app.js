@@ -26,6 +26,10 @@ angular.module('formApp', ['ngAnimate', 'ui.router'])
             .state('form.part-three', {
                 url : '/part-three',
                 templateUrl : 'form-part-three.html'
+            })
+            .state('form.part-four', {
+                url : '/part-four',
+                templateUrl : 'form-part-four.html'
             });
         $urlRouterProvider.otherwise('/form');
         
@@ -34,21 +38,22 @@ angular.module('formApp', ['ngAnimate', 'ui.router'])
 
     //controller for the form
     .controller('formController', ['$scope', '$http', function($scope, $http){
-        $scope.formData = {};
         $scope.quiz = {};
         $http.get('data/questions.json').success(function(data){
             $scope.quiz = data;
+            $scope.quiz.score = function(){
+                return ($scope.quiz.questions.correct / $scope.quiz.questions.totalQuestions) * 100;
+            };
+            $scope.checkAnswer = function(question, answer){
+                var $radios = $('.radio');
+                console.log(answer);
+                var $selected = $radios.find('input[type="radio"]:checked');
+                if(answer === $scope.quiz.questions[question].answer){
+                    $selected.parents('.radio').addClass('well-green');
+                    $scope.quiz.questions.correct++;
+                }else{
+                    $selected.parents('.radio').addClass('well-red');
+                }
+            };
         });
-        $scope.quiz.score = function(){
-            return $scope.quiz.questions.correct / $scope.quiz.questions.totalQuestions;
-        };
-        $scope.checkAnswer = function(question, answer){
-            var $radios = $('.radio');
-            var $selected = $radios.find('input[type="radio"]:checked');
-            if(answer === $scope.quiz.questions[question].answer){
-                $selected.parents('.radio').addClass('well-green');
-            }else{
-                $selected.parents('.radio').addClass('well-red');
-            }
-        };
     }]);

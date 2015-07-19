@@ -1,3 +1,5 @@
+@import 'partials/animations';
+
 #form-container {
   margin-bottom: 20px;
   border-radius: 5px;
@@ -16,14 +18,16 @@
     margin-right: 10px;
     text-align: center;
     text-transform: uppercase;
+    font-weight: bold;
+    padding: 1em;
+    border: 1px solid;
+    border-radius: 5px;
     &:hover {
       text-decoration: none;
     }
     &.active {
-      span {
-        //change the background color
-
-      }
+      background-color: #337ab7;
+      color: white;
     }
   }
   span {
@@ -41,4 +45,10 @@
 }
 .well-green {
   background-color: forestgreen;
+}
+
+#score-modal{
+  .modal-content{
+    font-size: 2em;
+  }
 }

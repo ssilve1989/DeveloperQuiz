@@ -10,6 +10,7 @@
                     <a ui-sref-active="active" ui-sref=".part-one">Level 1</a>
                     <a ui-sref-active="active" ui-sref=".part-two">Level 2</a>
                     <a ui-sref-active="active" ui-sref=".part-three">Level 3</a>
+                    <a ui-sref-active="active" ui-sref=".part-four">Level 4</a>
                 </div>
             </div>
             <!-- use ng-submit to catch the submission and pass it to the angular function -->
@@ -24,3 +25,24 @@
         </div>
     </div>
 </div>
+<section id="score-modal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content text-center">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h1>Here are your results!</h1>
+            </div>
+            <div class="modal-body">
+                <p>You received a score of: {{quiz.score()}}%</p>
+                <div id="score-result">
+                    <p>You have <br><strong>{{quiz.score() >= 80 ? 'Passed' : 'Failed'}}!</strong></p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</section>
