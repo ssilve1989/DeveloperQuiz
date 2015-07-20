@@ -10,11 +10,13 @@ Dependencies
 ## Running the Application ##
 
 **Install Dependencies**
+
 Install the depdencies by running
 
     npm install && bower install
 
 **Gulp**
+
  To run this application in development mode you can simply execute the connect gulp task:
 
     gulp connect
@@ -25,6 +27,7 @@ To run the production build you can run the gulp build task which will perform a
     gulp build
 
 **Without Gulp**
+
 You can also run this without gulp by executing run.sh
 
     ./run.sh
