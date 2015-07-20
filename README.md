@@ -10,6 +10,7 @@ Dependencies
 ## Running the Application ##
 
 **Install Dependencies**
+
 Install the depdencies by running
 
     npm install && bower install
