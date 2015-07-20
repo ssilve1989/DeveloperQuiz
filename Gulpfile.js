@@ -7,6 +7,12 @@ var config = {
 	dest : 'dist'
 };
 
+var gzip_config = {
+    src : config.dest + '/**/*.{html, css, js, json}',
+    dest : config.dest,
+    options : {}
+};
+
 var gulp = require('gulp');
 var usemin = require('gulp-usemin');
 var connect = require('gulp-connect');
@@ -18,12 +24,19 @@ var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var clean = require('del');
 var ngAnnotate = require('gulp-ng-annotate');
+var gzip = require('gulp-gzip');
 
-gulp.task('connect', function(target){
+gulp.task('connect', function(){
 	connect.server({
 		root: ".",
 		livereload : true
 	});
+});
+
+gulp.task('gzip', ['usemin'], function(){
+   return gulp.src(gzip_config.src)
+       .pipe(gzip(gzip_config.options))
+       .pipe(gulp.dest(gzip_config.dest));
 });
 
 gulp.task('connect:dist', function(){
@@ -68,4 +81,4 @@ gulp.task('copy', ['clean'], function(){
 
 gulp.task('serve', ['connect']);
 
-gulp.task('build', ['clean', 'copy', 'usemin', 'sass', 'connect:dist']);
+gulp.task('build', ['clean', 'copy', 'usemin', 'sass', 'gzip', 'connect:dist']);
