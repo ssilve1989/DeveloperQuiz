@@ -1,4 +1,5 @@
-## Developer Quiz ##
+Developer Quiz
+===================
 
 Interactive Quiz using AngularJS UI-Router
 
