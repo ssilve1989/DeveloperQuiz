@@ -1,7 +1,7 @@
 {
+  "correct" : 0,
+  "totalQuestions" : 7,
   "questions": {
-    "totalQuestions": 4,
-    "correct" : 0,
     "q1": {
       "answer": "5,5"
     },
@@ -12,7 +12,16 @@
       "answer": "O(n)"
     },
     "q4" : {
+      "answer" : "3"
+    },
+    "q5" : {
       "answer" : "1em"
+    },
+    "q6" : {
+        "answer": "undefined"
+    },
+    "q7" : {
+      "answer" : "false"
     }
   }
 }

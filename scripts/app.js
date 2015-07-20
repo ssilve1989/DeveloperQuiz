@@ -30,7 +30,15 @@ angular.module('formApp', ['ngAnimate', 'ui.router'])
             .state('form.part-four', {
                 url : '/part-four',
                 templateUrl : 'form-part-four.html'
-            });
+            })
+            .state('form.part-five', {
+                url : '/part-five',
+                templateUrl : 'form-part-five.html'
+            })
+	        .state('form.end', {
+		        url : '/end',
+		        templateUrl : 'form-end.html'
+	        });
         $urlRouterProvider.otherwise('/form');
         
         $locationProvider.html5Mode(true);
@@ -42,18 +50,20 @@ angular.module('formApp', ['ngAnimate', 'ui.router'])
         $http.get('data/questions.json').success(function(data){
             $scope.quiz = data;
             $scope.quiz.score = function(){
-                return ($scope.quiz.questions.correct / $scope.quiz.questions.totalQuestions) * 100;
+                return Math.round(($scope.quiz.correct / $scope.quiz.totalQuestions) * 100);
             };
             $scope.checkAnswer = function(question, answer){
+	            var q = $scope.quiz.questions[question];
+	            if(q.answered) return;
                 var $radios = $('.radio');
-                console.log(answer);
                 var $selected = $radios.find('input[type="radio"]:checked');
-                if(answer === $scope.quiz.questions[question].answer){
+                if(answer === q.answer){
                     $selected.parents('.radio').addClass('well-green');
-                    $scope.quiz.questions.correct++;
+                    $scope.quiz.correct++;
                 }else{
                     $selected.parents('.radio').addClass('well-red');
                 }
+	            q.answered = true;
             };
         });
     }]);

@@ -28,7 +28,7 @@
     <div class="radio well well-sm">
         <label>
             <input type="radio" name="q2-radio" value="false,true,true,true,false,true"  ng-model="q2">
-            false,true,true,false,true
+            false,true,true,true,false,true
         </label>
     </div>
     <div class="radio well well-sm">
@@ -44,8 +44,8 @@
         </label>
     </div>
     <div class="row">
-        <button id="q2" class="btn btn-default btn-success" ng-click="checkAnswer('q2', q2)">Check Answer</button>
-        <a ui-sref="form.part-three" class="btn btn-default btn-primary">
+        <button id="q2" class="btn btn-default" ng-click="checkAnswer('q2', q2)">Check Answer</button>
+        <a ui-sref="form.part-three" class="btn btn-primary">
             Next
             <span class="glyphicon glyphicon-circle-arrow-right"></span>
         </a>

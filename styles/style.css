@@ -69,6 +69,11 @@
     border-top-left-radius: 5px;
     border-top-right-radius: 5px; }
 
+#form-views .row {
+  margin: 0; }
+#form-views section {
+  margin-bottom: 1em; }
+
 #status-buttons a {
   display: inline-block;
   font-size: 12px;
@@ -97,6 +102,9 @@
 
 .well-green {
   background-color: forestgreen; }
+
+.page-header {
+  border-bottom: 0; }
 
 #score-modal .modal-content {
   font-size: 2em; }

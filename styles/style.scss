@@ -10,6 +10,14 @@
     border-top-right-radius: 5px;
   }
 }
+#form-views{
+  .row{
+    margin: 0;
+  }
+  section{
+    margin-bottom: 1em;
+  }
+}
 
 #status-buttons {
   a {
@@ -45,6 +53,10 @@
 }
 .well-green {
   background-color: forestgreen;
+}
+
+.page-header{
+  border-bottom: 0;
 }
 
 #score-modal{

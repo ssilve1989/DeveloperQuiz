@@ -1,40 +1,35 @@
 <section id="q4-form">
     <div class="well">
-        <h2>What is the total margin between the two divs?</h2>
+        <h2>What is the difference between a List and Set?</h2>
     </div>
-    <pre style='color:#000000;background:#ffffff;'>
-<span style='color:#7f0055; '>&lt;</span><span style='color:#000084; font-weight:bold; '>style</span><span style='color:#7f0055; '>></span>
-.isolated { <span style='color:#000084; font-weight:bold; '>margin</span>: 1em 0 }
-<span style='color:#7f0055; '>&lt;/</span><span style='color:#000084; font-weight:bold; '>style</span><span style='color:#7f0055; '>></span>
-<span style='color:#7f0055; '>&lt;</span><span style='color:#000084; font-weight:bold; '>div</span> class=<span style='color:#0000ff; '>"isolated"</span><span style='color:#7f0055; '>></span>First Div<span style='color:#7f0055; '>&lt;/</span><span style='color:#000084; font-weight:bold; '>div</span><span style='color:#7f0055; '>></span>
-<span style='color:#7f0055; '>&lt;</span><span style='color:#000084; font-weight:bold; '>div</span> class=<span style='color:#0000ff; '>"isolated"</span><span style='color:#7f0055; '>></span>Second Div<span style='color:#7f0055; '>&lt;/</span><span style='color:#000084; font-weight:bold; '>div</span><span style='color:#7f0055; '>></span>
-    </pre>
     <div class="radio well">
         <label>
-            <input type="radio" name="q4-radio" ng-model="a4" value="1em">
-            1em
+            <input type="radio" value="1" name="q4-radio" ng-model="a4">
+            A List can only contain unique values. A Set can contain duplicates.
         </label>
     </div>
     <div class="radio well">
         <label>
-            <input type="radio" name="q4-radio" ng-model="a4" value="2em">
-            2em
+            <input type="radio" value="2" name="q4-radio" ng-model="a4">
+            A Set is a key, value collection whereas a List is a single item collection.
         </label>
     </div>
     <div class="radio well">
         <label>
-            <input type="radio" name="q4-radio" ng-model="a4" value="0">
-            0
+            <input type="radio" value="3" name="q4-radio" ng-model="a4">
+            A list can contain duplicates. A set can only contain unique values.
         </label>
     </div>
     <div class="radio well">
         <label>
-            <input type="radio" name="q4-radio" ng-model="a4" value="1.5em">
-            1.5em
+            <input type="radio" name="q4-radio" value="4" ng-model="a4">
+            A list can only contain primitive data types. A set can contain any Object type.
         </label>
     </div>
     <div class="row">
-        <button type="button" class="btn btn-success" ng-click="checkAnswer('q4', a4)">Check Answer</button>
-        <a ui-sref="form.part-five" class="btn btn-primary">Next <span class="glyphicon glyphicon-circle-arrow-right"></span></a>
+        <button type="button" id="q4" class="btn btn-default" ng-click="checkAnswer('q4', a4)">Check Answer</button>
+        <a ui-sref="form.part-five" class="btn btn-primary">Next
+            <span class="glyphicon glyphicon-circle-arrow-right"></span>
+        </a>
     </div>
 </section>

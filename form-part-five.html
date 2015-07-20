@@ -1,0 +1,102 @@
+<section>
+    <div class="well">
+        <h2>What is the total margin between the two divs?</h2>
+    </div>
+    <pre style='color:#000000;background:#ffffff;'>
+<span style='color:#7f0055; '>&lt;</span><span style='color:#000084; font-weight:bold; '>style</span><span style='color:#7f0055; '>></span>
+.isolated { <span style='color:#000084; font-weight:bold; '>margin</span>: 1em 0 }
+<span style='color:#7f0055; '>&lt;/</span><span style='color:#000084; font-weight:bold; '>style</span><span style='color:#7f0055; '>></span>
+<span style='color:#7f0055; '>&lt;</span><span style='color:#000084; font-weight:bold; '>div</span> class=<span style='color:#0000ff; '>"isolated"</span><span style='color:#7f0055; '>></span>First Div<span style='color:#7f0055; '>&lt;/</span><span style='color:#000084; font-weight:bold; '>div</span><span style='color:#7f0055; '>></span>
+<span style='color:#7f0055; '>&lt;</span><span style='color:#000084; font-weight:bold; '>div</span> class=<span style='color:#0000ff; '>"isolated"</span><span style='color:#7f0055; '>></span>Second Div<span style='color:#7f0055; '>&lt;/</span><span style='color:#000084; font-weight:bold; '>div</span><span style='color:#7f0055; '>></span>
+    </pre>
+    <div class="radio well">
+        <label>
+            <input type="radio" name="q5-radio" ng-model="a5" value="1em">
+            1em
+        </label>
+    </div>
+    <div class="radio well">
+        <label>
+            <input type="radio" name="q5-radio" ng-model="a5" value="2em">
+            2em
+        </label>
+    </div>
+    <div class="radio well">
+        <label>
+            <input type="radio" name="q5-radio" ng-model="a5" value="0">
+            0
+        </label>
+    </div>
+    <div class="radio well">
+        <label>
+            <input type="radio" name="q5-radio" ng-model="a5" value="1.5em">
+            1.5em
+        </label>
+    </div>
+    <div class="row">
+        <button type="button" class="btn btn-default" ng-click="checkAnswer('q5', a5)">Check Answer</button>
+    </div>
+</section>
+<section>
+    <div class="well">
+        <h2>What is the output of the following snippet?</h2>
+    </div>
+        <pre style='color:#000000;background:#ffffff;'><span style='color:#7f0055; font-weight:bold; '>var</span> Super = <span style='color:#7f0055; font-weight:bold; '>function</span>() {};
+    Super.prototype = {
+        data : <span style='color:#7f0055; font-weight:bold; '>undefined</span>,
+        getData : <span style='color:#7f0055; font-weight:bold; '>function</span>(){
+            <span style='color:#7f0055; font-weight:bold; '>return</span> <span style='color:#7f0055; font-weight:bold; '>this</span>.data;
+        }
+    };
+    <span style='color:#7f0055; font-weight:bold; '>var</span> o = <span style='color:#7f0055; font-weight:bold; '>new</span> Super();
+    $.getJSON(<span style='color:#2a00ff; '>'</span><span style='color:#2a00ff; '>data.json</span><span style='color:#2a00ff; '>'</span>, <span style='color:#7f0055; font-weight:bold; '>function</span>(_data){
+        o.data = _data;
+    });
+    <span style='color:#7f0055; font-weight:bold; '>alert</span>(o.getData());
+    </pre>
+    <div class="radio well">
+        <label>
+            <input type="radio" ng-model="a6" name="q6-radio" value="undefined">
+            undefined
+        </label>
+    </div>
+    <div class="radio well">
+        <label>
+            <input type="radio" ng-model="a6" name="q6-radio" value="null">
+            null
+        </label>
+    </div>
+    <div class="radio well">
+        <label>
+            <input type="radio" ng-model="a6" name="q6-radio" value="data">
+            Object {}
+        </label>
+    </div>
+    <div class="row">
+        <button type="button" class="btn btn-default" ng-click="checkAnswer('q6', a6)">Check Answer</button>
+        <!--<a ui-sref="form.part-six" class="btn btn-primary">Next <span class="glyphicon glyphicon-circle-arrow-right"></span></a>-->
+    </div>
+</section>
+<section>
+    <div class="well">
+        <h2>Using the snippet from the above question, What is the result of the following expression?</h2>
+    </div>
+    <pre style='color:#000000;background:#ffffff;'>o<span style='color:#808030; '>.</span>getData<span style='color:#808030; '>(</span><span style='color:#808030; '>)</span> <span style='color:#808030; '>===</span> <span style='color:#0f4d75; '>null</span>
+    </pre>
+    <div class="radio well">
+        <label>
+            <input type="radio" name="q7-radio" ng-model="a7" value="true">
+            True
+        </label>
+    </div>
+    <div class="radio well">
+        <label>
+            <input type="radio" name="q7-radio" ng-model="a7" value="false">
+            False
+        </label>
+    </div>
+    <div class="row">
+        <button type="button" class="btn btn-default" ng-click="checkAnswer('q7', a7)">Check Answer</button>
+        <a ui-sref="form.end" class="btn btn-primary">Next <span class="glyphicon glyphicon-circle-arrow-right"></span></a>
+    </div>
+</section>
