@@ -1,6 +1,6 @@
 {
   "correct" : 0,
-  "totalQuestions" : 7,
+  "totalQuestions" : 8,
   "questions": {
     "q1": {
       "answer": "5,5"
@@ -21,6 +21,12 @@
         "answer": "undefined"
     },
     "q7" : {
+      "answer" : "false"
+    },
+    "q8" : {
+      "answer" : "O(1)"
+    },
+    "q9" : {
       "answer" : "false"
     }
   }

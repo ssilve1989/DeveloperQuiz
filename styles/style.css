@@ -97,6 +97,12 @@
   width: 30px;
   border-radius: 50%; }
 
+section > .well:first-child {
+  font-family: monospace, monospace; }
+  section > .well:first-child h2 {
+    font-size: 1.25em;
+    line-height: 1.5em; }
+
 .well-red {
   background-color: red; }
 

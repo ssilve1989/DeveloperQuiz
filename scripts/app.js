@@ -52,10 +52,10 @@ angular.module('formApp', ['ngAnimate', 'ui.router'])
             $scope.quiz.score = function(){
                 return Math.round(($scope.quiz.correct / $scope.quiz.totalQuestions) * 100);
             };
-            $scope.checkAnswer = function(question, answer){
+            $scope.checkAnswer = function($event, question, answer){
 	            var q = $scope.quiz.questions[question];
 	            if(q.answered) return;
-                var $radios = $('.radio');
+                var $radios = $($event.currentTarget).parent().siblings('.radio');
                 var $selected = $radios.find('input[type="radio"]:checked');
                 if(answer === q.answer){
                     $selected.parents('.radio').addClass('well-green');
@@ -65,5 +65,9 @@ angular.module('formApp', ['ngAnimate', 'ui.router'])
                 }
 	            q.answered = true;
             };
+            $scope.reset = function(){
+                $scope.quiz.correct = 0;
+                window.location.href = '/';
+            }
         });
     }]);

@@ -1,7 +1,7 @@
 <section id="q3-form">
-    <pre>
-        What is the time complexity for get() on a java.util.LinkedList&lt;E&gt;?
-    </pre>
+    <div class="well">
+        <h2>What is the time complexity for the get() operation on a java.util.LinkedList&lt;E&gt;?</h2>
+    </div>
     <div class="radio well">
         <label>
             <input type="radio" name="q3-radio" value="O(n)"  ng-model="q3" checked>
@@ -27,7 +27,39 @@
         </label>
     </div>
     <div class="row">
-        <button id="q3" class="btn btn-default" ng-click="checkAnswer('q3', q3)">Check Answer</button>
+        <button id="q3" class="btn btn-default" ng-click="checkAnswer($event, 'q3', q3)">Check Answer</button>
+    </div>
+</section>
+<section>
+    <div class="well">
+        <h2>What is the time complexity of the get() operation on java.util.ArrayList&lt;E&gt;?</h2>
+    </div>
+    <div class="radio well">
+        <label>
+            <input type="radio" name="q8-radio" ng-model="q8" value="O(n)">
+            O(n)
+        </label>
+    </div>
+    <div class="radio well">
+        <label>
+            <input type="radio" name="q8-radio" ng-model="q8" value="O(1)">
+            O(1)
+        </label>
+    </div>
+    <div class="radio well">
+        <label>
+            <input type="radio" name="q8-radio" ng-model="q8" value="O(n^2)">
+            O(n<sup>2</sup>)
+        </label>
+    </div>
+    <div class="radio well">
+        <label>
+            <input type="radio" name="q8-radio" ng-model="q8" value="O(n log n)">
+            O(n log n)
+        </label>
+    </div>
+    <div class="row">
+        <button type="button" class="btn btn-default" ng-click="checkAnswer($event, 'q8', q8)">Check Answer</button>
         <a ui-sref="form.part-four" class="btn btn-primary">
             Next
             <span class="glyphicon glyphicon-circle-arrow-right"></span>

@@ -44,7 +44,27 @@
         </label>
     </div>
     <div class="row">
-        <button id="q2" class="btn btn-default" ng-click="checkAnswer('q2', q2)">Check Answer</button>
+        <button id="q2" class="btn btn-default" ng-click="checkAnswer($event, 'q2', q2)">Check Answer</button>
+    </div>
+</section>
+<section>
+    <div class="well">
+        <h2>Evaluate the following statement: <br>You can override private methods.</h2>
+    </div>
+    <div class="radio well">
+        <label>
+            <input type="radio" name="q9-radio" ng-model="a9" value="true">
+            True
+        </label>
+    </div>
+    <div class="radio well">
+        <label>
+            <input type="radio" name="q9-radio" ng-model="a9" value="false">
+            False
+        </label>
+    </div>
+    <div class="row">
+        <button type="button" class="btn btn-default" ng-click="checkAnswer($event, 'q9', a9)">Check Answer</button>
         <a ui-sref="form.part-three" class="btn btn-primary">
             Next
             <span class="glyphicon glyphicon-circle-arrow-right"></span>

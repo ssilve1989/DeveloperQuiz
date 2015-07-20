@@ -34,7 +34,7 @@
         </label>
     </div>
     <div class="row">
-        <button type="button" class="btn btn-default" ng-click="checkAnswer('q5', a5)">Check Answer</button>
+        <button type="button" class="btn btn-default" ng-click="checkAnswer($event, 'q5', a5)">Check Answer</button>
     </div>
 </section>
 <section>
@@ -73,7 +73,7 @@
         </label>
     </div>
     <div class="row">
-        <button type="button" class="btn btn-default" ng-click="checkAnswer('q6', a6)">Check Answer</button>
+        <button type="button" class="btn btn-default" ng-click="checkAnswer($event, 'q6', a6)">Check Answer</button>
         <!--<a ui-sref="form.part-six" class="btn btn-primary">Next <span class="glyphicon glyphicon-circle-arrow-right"></span></a>-->
     </div>
 </section>
@@ -96,7 +96,7 @@
         </label>
     </div>
     <div class="row">
-        <button type="button" class="btn btn-default" ng-click="checkAnswer('q7', a7)">Check Answer</button>
-        <a ui-sref="form.end" class="btn btn-primary">Next <span class="glyphicon glyphicon-circle-arrow-right"></span></a>
+        <button type="button" class="btn btn-default" ng-click="checkAnswer($event, 'q7', a7)">Check Answer</button>
+        <a ui-sref="form.end" class="btn btn-primary">Finish <span class="glyphicon glyphicon-circle-arrow-right"></span></a>
     </div>
 </section>
