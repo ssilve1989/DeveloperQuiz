@@ -2,7 +2,7 @@
  * Created by steve on 7/18/15.
  */
 //Create module and inject animate and ui-router
-angular.module('formApp', ['ngAnimate', 'ui.router'])
+angular.module('formApp', ['ngAnimate', 'ui.router', 'socialLinks'])
 //Configure routes
     .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
         $stateProvider
