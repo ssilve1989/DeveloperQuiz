@@ -9,7 +9,7 @@ angular.module('formApp', ['ngAnimate', 'ui.router', 'socialLinks'])
             //route to show basic form
             .state('form', {
                 url: '/form',
-                templateUrl: 'form.html',
+                templateUrl: 'views/form/form.html',
                 controller: 'formController'
             })
             //nested states
@@ -17,27 +17,27 @@ angular.module('formApp', ['ngAnimate', 'ui.router', 'socialLinks'])
             //url will be nested (/form/part-one)
             .state('form.part-one', {
                 url: '/part-one',
-                templateUrl: 'form-part-one.html'
+                templateUrl: 'views/form/form-part-one.html'
             })
             .state('form.part-two', {
                 url : '/part-two',
-                templateUrl : 'form-part-two.html'
+                templateUrl : 'views/form/form-part-two.html'
             })
             .state('form.part-three', {
                 url : '/part-three',
-                templateUrl : 'form-part-three.html'
+                templateUrl : 'views/form/form-part-three.html'
             })
             .state('form.part-four', {
                 url : '/part-four',
-                templateUrl : 'form-part-four.html'
+                templateUrl : 'views/form/form-part-four.html'
             })
             .state('form.part-five', {
                 url : '/part-five',
-                templateUrl : 'form-part-five.html'
+                templateUrl : 'views/form/form-part-five.html'
             })
 	        .state('form.end', {
 		        url : '/end',
-		        templateUrl : 'form-end.html'
+		        templateUrl : 'views/form/form-end.html'
 	        });
         $urlRouterProvider.otherwise('/form');
         

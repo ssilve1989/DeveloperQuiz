@@ -6,7 +6,7 @@
     <title>Mount Sinai - Senior Web Application Interview Quiz</title>
     <base href="/">
     <!-- build:css styles/vendor.css -->
-    <link async rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="bower_components/normalize.css/normalize.css">
     <!-- endbuild -->
@@ -23,9 +23,8 @@
         </div>
     </header>
     <div class="container">
-
         <!-- views injected here -->
-        <div ui-view></div>
+        <main ui-view></main>
     </div>
     <footer id="global-footer" class="navbar navbar-default navbar-fixed-bottom">
         <div class="container text-center">
@@ -56,8 +55,8 @@
                     </ul>
                 </div>
                 <div class="col-md-4">
-                    <a ui-sref="contact">Report a Bug</a>
-                    &nbsp;&nbsp;
+                    <!--<a ui-sref="contact">Report a Bug</a>
+                    &nbsp;&nbsp;-->
                     <a href="http://ssilve1989.github.io" target="_blank">Visit Developer Website</a>
                 </div>
             </section>

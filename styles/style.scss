@@ -3,6 +3,10 @@
 @import 'modules/social_buttons';
 @import 'modules/footer';
 
+main{
+  margin-bottom: 106px;
+}
+
 #score-modal{
   .modal-content{
     font-size: 2em;

@@ -61,8 +61,8 @@
   to {
     -webkit-transform: translateX(0); } }
 .random-color {
-  color: rgb(78, 21, 74);
-  background-color: rgba(78, 21, 74, 0.11); }
+  color: rgb(101, 43, 203);
+  background-color: rgba(101, 43, 203, 0.24); }
 
 .btn-facebook, .btn-twitter, .btn-google {
   border-color: #BFBFBF;
@@ -95,6 +95,9 @@
   justify-content: center; }
   #social-networks ul li {
     padding: 1em; }
+
+main {
+  margin-bottom: 106px; }
 
 #score-modal .modal-content {
   font-size: 2em; }
