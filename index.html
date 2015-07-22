@@ -11,14 +11,6 @@
     <link rel="stylesheet" href="bower_components/normalize.css/normalize.css">
     <!-- endbuild -->
     <link rel="stylesheet" href="styles/style.css">
-    <!-- build:js scripts/vendor.js -->
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="bower_components/angular/angular.min.js"></script>
-    <script src="bower_components/ui-router/release/angular-ui-router.min.js"></script>
-    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
-    <script src="bower_components/angular-social-links/angular-social-links.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!-- endbuild -->
 </head>
 <body ng-app="formApp">
     <header>
@@ -35,7 +27,50 @@
         <!-- views injected here -->
         <div ui-view></div>
     </div>
-
+    <footer id="global-footer" class="navbar navbar-default navbar-fixed-bottom">
+        <div class="container text-center">
+            <section class="row">
+                <h1 class="sr-only">Footer</h1>
+                <div id="social-networks" class="col-md-4">
+                    <ul>
+                        <li>
+                            <a href="http://www.facebook.com/steve.silvestri.33" target="_blank">
+                                <i class="fa fa-2x fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.instagram.com/jsx1080" target="_blank">
+                                <i class="fa fa-2x fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.github.com/ssilve1989" target="_blank">
+                                <i class="fa fa-2x fa-github"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.linkedin.com/steve.silvestri" target="_blank">
+                                <i class="fa fa-2x fa-linkedin"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <a ui-sref="contact">Report a Bug</a>
+                    &nbsp;&nbsp;
+                    <a href="http://ssilve1989.github.io" target="_blank">Visit Developer Website</a>
+                </div>
+            </section>
+        </div>
+    </footer>
+    <!-- build:js scripts/vendor.js -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/ui-router/release/angular-ui-router.min.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="bower_components/angular-social-links/angular-social-links.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- endbuild -->
     <script src="scripts/app.js"></script>
 </body>
 </html>

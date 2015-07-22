@@ -61,8 +61,8 @@
   to {
     -webkit-transform: translateX(0); } }
 .random-color {
-  color: rgb(209, 42, 225);
-  background-color: rgba(209, 42, 225, 0.42); }
+  color: rgb(78, 21, 74);
+  background-color: rgba(78, 21, 74, 0.11); }
 
 .btn-facebook, .btn-twitter, .btn-google {
   border-color: #BFBFBF;
@@ -79,6 +79,22 @@
 .btn-google {
   background-color: #dd4b39;
   color: #FFFFFF; }
+
+#global-footer {
+  padding: 1em; }
+
+#social-networks ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center; }
+  #social-networks ul li {
+    padding: 1em; }
 
 #score-modal .modal-content {
   font-size: 2em; }
