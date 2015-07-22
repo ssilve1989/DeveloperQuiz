@@ -72,9 +72,11 @@ gulp.task('sass', ['clean'], function(){
 });
 
 gulp.task('copy', ['clean'], function(){
-	gulp.src('./form*.html').pipe(gulp.dest(config.dest));
+	//gulp.src('./form*.html').pipe(gulp.dest(config.dest));
 	gulp.src('./bower_components/bootstrap/fonts/*.*').pipe(gulp.dest(config.dest + '/fonts'));
+    gulp.src('./bower_components/fontawesome/fonts/*.*').pipe(gulp.dest(config.dest + '/fonts'));
 	gulp.src('./data/**.*').pipe(gulp.dest(config.dest + '/data'));
+    gulp.src('./views/**/*').pipe(gulp.dest(config.dest + '/views'));
 	return gulp.src('./scripts/*.js').pipe(ngAnnotate()).pipe(uglify()).pipe(gulp.dest(config.dest + '/scripts'));
 });
 
@@ -82,3 +84,4 @@ gulp.task('copy', ['clean'], function(){
 gulp.task('serve', ['connect']);
 
 gulp.task('build', ['clean', 'copy', 'usemin', 'sass', 'gzip', 'connect:dist']);
+gulp.task('heroku-build', ['clean', 'copy', 'usemin', 'sass']);
