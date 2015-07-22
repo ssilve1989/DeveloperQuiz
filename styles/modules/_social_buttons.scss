@@ -1,0 +1,23 @@
+@import '../partials/colors';
+
+%btn {
+  border-color: $color-scheme1;
+  font-weight: 700;
+}
+
+.btn-facebook {
+  @extend %btn;
+  background-color: $facebook;
+  color: $white;
+}
+
+.btn-twitter {
+  @extend %btn;
+  background-color: $twitter;
+  color: $white;
+}
+.btn-google {
+  @extend %btn;
+  background-color: $googleplus;
+  color: $white;
+}

@@ -22,6 +22,7 @@
     "ui-router": "~0.2.15",
     "angular-animate": "~1.4.3",
     "fontawesome": "~4.3.0",
-    "normalize.css": "~3.0.3"
+    "normalize.css": "~3.0.3",
+    "angular-social-links": "~0.0.19"
   }
 }

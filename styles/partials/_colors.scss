@@ -1,0 +1,50 @@
+$white: #FFFFFF;
+$black: #000000;
+
+$color-scheme1: #BFBFBF;
+$color-scheme2: #7f7f7f;
+$color-scheme3: #404040;
+$color-scheme4: #E5E5E5;
+
+$dark-gray: #404040;
+$coal: #272727;
+
+$twitter: #00aced;
+$facebook: #3b5998;
+$googleplus: #dd4b39;
+$pinterest: #cb2027;
+$linkedin: #007bb6;
+$youtube: #bb0000;
+$vimeo: #aad450;
+$tumblr: #32506d;
+$instagram: #517fa4;
+$flickr: #ff0084;
+$dribbble: #ea4c89;
+$quora: #a82400;
+$foursquare: #0072b1;
+$forrst: #5B9A68;
+$vk: #45668e;
+$wordpress: #21759b;
+$stumbleupon: #EB4823;
+$yahoo: #7B0099;
+$blogger: #fb8f3d;
+$soundcloud: #ff3a00;
+
+$red: random(256)-1;
+$green: random(256)-1;
+$blue: random(256)-1;
+$alpha: random(100)/100;
+
+
+$pastel_blue: #3ab0e2;
+$pastel_red: #e96656;
+$pastel_green: #34d293;
+$pastel_yellow: #E7AC44;
+
+$pastel_list: $pastel_blue, $pastel_red, $pastel_green, $pastel_yellow;
+$random_pastel: nth($pastel_list, random(4));
+
+.random-color {
+  color: unquote("rgb(#{$red}, #{$green}, #{$blue})");
+  background-color: unquote("rgba(#{$red}, #{$green}, #{$blue}, #{$alpha})");
+}
