@@ -1,5 +1,12 @@
+@import 'mixins/display';
 @import 'partials/animations';
 @import 'modules/social_buttons';
+
+#score-modal{
+  .modal-content{
+    font-size: 2em;
+  }
+}
 
 #form-container {
   margin-bottom: 20px;
@@ -9,8 +16,10 @@
     padding: 30px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
+    border-bottom: 0;
   }
 }
+
 #form-views{
   .row{
     margin: 0;
@@ -20,9 +29,13 @@
   }
 }
 
+/*Level Buttons */
 #status-buttons {
+  @include flexbox;
+  justify-content: center;
   a {
-    display: inline-block;
+    //display: inline-block;
+    display: none;
     font-size: 12px;
     margin-right: 10px;
     text-align: center;
@@ -37,6 +50,7 @@
     &.active {
       background-color: #337ab7;
       color: white;
+      display: inline-block;
     }
   }
   span {
@@ -56,6 +70,13 @@ section > .well:first-child{
     line-height: 1.5em;
   }
 }
+
+/*Code Stylings*/
+pre{
+  word-wrap: normal;
+}
+
+/*Well Colors*/
 .well-red {
   background-color: red;
 }
@@ -63,12 +84,13 @@ section > .well:first-child{
   background-color: forestgreen;
 }
 
-.page-header{
-  border-bottom: 0;
-}
-
-#score-modal{
-  .modal-content{
-    font-size: 2em;
+@media screen and (min-width: 767px){
+  #status-buttons {
+    a{
+      display: inline-block;
+    }
+  }
+  .ui-previous{
+    display: none;
   }
 }

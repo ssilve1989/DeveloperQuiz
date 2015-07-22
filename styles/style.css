@@ -61,8 +61,8 @@
   to {
     -webkit-transform: translateX(0); } }
 .random-color {
-  color: rgb(64, 65, 250);
-  background-color: rgba(64, 65, 250, 0.21); }
+  color: rgb(209, 42, 225);
+  background-color: rgba(209, 42, 225, 0.42); }
 
 .btn-facebook, .btn-twitter, .btn-google {
   border-color: #BFBFBF;
@@ -80,6 +80,9 @@
   background-color: #dd4b39;
   color: #FFFFFF; }
 
+#score-modal .modal-content {
+  font-size: 2em; }
+
 #form-container {
   margin-bottom: 20px;
   border-radius: 5px; }
@@ -87,35 +90,45 @@
     margin: 0;
     padding: 30px;
     border-top-left-radius: 5px;
-    border-top-right-radius: 5px; }
+    border-top-right-radius: 5px;
+    border-bottom: 0; }
 
 #form-views .row {
   margin: 0; }
 #form-views section {
   margin-bottom: 1em; }
 
-#status-buttons a {
-  display: inline-block;
-  font-size: 12px;
-  margin-right: 10px;
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: bold;
-  padding: 1em;
-  border: 1px solid;
-  border-radius: 5px; }
-  #status-buttons a:hover {
-    text-decoration: none; }
-  #status-buttons a.active {
-    background-color: #337ab7;
-    color: white; }
-#status-buttons span {
-  display: block;
-  height: 30px;
-  margin: 0 auto 10px;
-  padding-top: 5px;
-  width: 30px;
-  border-radius: 50%; }
+/*Level Buttons */
+#status-buttons {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center; }
+  #status-buttons a {
+    display: none;
+    font-size: 12px;
+    margin-right: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 1em;
+    border: 1px solid;
+    border-radius: 5px; }
+    #status-buttons a:hover {
+      text-decoration: none; }
+    #status-buttons a.active {
+      background-color: #337ab7;
+      color: white;
+      display: inline-block; }
+  #status-buttons span {
+    display: block;
+    height: 30px;
+    margin: 0 auto 10px;
+    padding-top: 5px;
+    width: 30px;
+    border-radius: 50%; }
 
 section > .well:first-child {
   font-family: monospace, monospace; }
@@ -123,16 +136,22 @@ section > .well:first-child {
     font-size: 1.25em;
     line-height: 1.5em; }
 
+/*Code Stylings*/
+pre {
+  word-wrap: normal; }
+
+/*Well Colors*/
 .well-red {
   background-color: red; }
 
 .well-green {
   background-color: forestgreen; }
 
-.page-header {
-  border-bottom: 0; }
+@media screen and (min-width: 767px) {
+  #status-buttons a {
+    display: inline-block; }
 
-#score-modal .modal-content {
-  font-size: 2em; }
+  .ui-previous {
+    display: none; } }
 
 /*# sourceMappingURL=style.css.map */
