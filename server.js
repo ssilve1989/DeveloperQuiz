@@ -1,6 +1,7 @@
 /**
  * Created by steve on 7/22/15.
  */
+require('newrelic');
 var gzippo = require('gzippo');
 var express = require('express');
 //var path = require('path');
