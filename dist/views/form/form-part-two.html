@@ -1,0 +1,77 @@
+<section id="q2-form">
+    <pre style='color:#000000;background:#ffffff;'><span style='color:#7f0055; font-weight:bold; '>public</span> <span style='color:#7f0055; font-weight:bold; '>static</span> void main(String[] args){
+    <span style='color:#7f0055; font-weight:bold; '>String</span> one = <span style='color:#2a00ff; '>"s"</span>;
+    <span style='color:#7f0055; font-weight:bold; '>String</span> two = <span style='color:#7f0055; font-weight:bold; '>new</span> <span style='color:#7f0055; font-weight:bold; '>String</span>(<span style='color:#2a00ff; '>"s"</span>);
+    <span style='color:#7f0055; font-weight:bold; '>String</span> three = <span style='color:#2a00ff; '>"s"</span>;
+    StringBuilder four = <span style='color:#7f0055; font-weight:bold; '>new</span> StringBuilder(<span style='color:#2a00ff; '>"s"</span>);
+
+    <span style='color:#7f0055; font-weight:bold; '>System</span>.out.println(one == two);
+    <span style='color:#7f0055; font-weight:bold; '>System</span>.out.println(one.equals(two));
+    <span style='color:#7f0055; font-weight:bold; '>System</span>.out.println(one == three);
+    <span style='color:#7f0055; font-weight:bold; '>System</span>.out.println(one.equals(three));
+    <span style='color:#7f0055; font-weight:bold; '>System</span>.out.println(one.equals(four));
+    <span style='color:#7f0055; font-weight:bold; '>System</span>.out.println(one.contentEquals(four));
+}
+    </pre>
+    <div class="radio well well-sm">
+        <label>
+            <input type="radio" name="q2-radio" value="true,true,true,true,false,true" ng-model="q2">
+            true,true,true,true,false,true
+        </label>
+    </div>
+    <div class="radio well well-sm">
+        <label>
+            <input type="radio" name="q2-radio" value="true,true,true,true,false,false"  ng-model="q2">
+            true,true,true,true,false,false
+        </label>
+    </div>
+    <div class="radio well well-sm">
+        <label>
+            <input type="radio" name="q2-radio" value="false,true,true,true,false,true"  ng-model="q2">
+            false,true,true,true,false,true
+        </label>
+    </div>
+    <div class="radio well well-sm">
+        <label>
+            <input type="radio" name="q2-radio" value="true,false,true,false,true,false"  ng-model="q2">
+            true,false,true,false,true,false
+        </label>
+    </div>
+    <div class="radio well well-sm">
+        <label>
+            <input type="radio" name="q2-radio" value="true,false,true,false,true,true"  ng-model="q2">
+            true,false,true,false,true,true
+        </label>
+    </div>
+    <div class="row">
+        <button id="q2" class="btn btn-default" ng-click="checkAnswer($event, 'q2', q2)">Check Answer</button>
+    </div>
+</section>
+<section>
+    <div class="well">
+        <h2>Evaluate the following statement: <br>You can override private methods.</h2>
+    </div>
+    <div class="radio well">
+        <label>
+            <input type="radio" name="q9-radio" ng-model="a9" value="true">
+            True
+        </label>
+    </div>
+    <div class="radio well">
+        <label>
+            <input type="radio" name="q9-radio" ng-model="a9" value="false">
+            False
+        </label>
+    </div>
+    <div class="row">
+        <a ui-sref="form.part-one" class="btn btn-primary ui-previous">
+            <span class="glyphicon glyphicon-circle-arrow-left"></span>
+            Back
+        </a>
+        <button type="button" class="btn btn-default" ng-click="checkAnswer($event, 'q9', a9)">Check Answer</button>
+        <a ui-sref="form.part-three" class="btn btn-primary">
+            Next
+            <span class="glyphicon glyphicon-circle-arrow-right"></span>
+        </a>
+    </div>
+</section>

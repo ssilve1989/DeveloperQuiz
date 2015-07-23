@@ -1,0 +1,39 @@
+<section id="q4-form">
+    <div class="well">
+        <h2>What is the difference between a List and Set?</h2>
+    </div>
+    <div class="radio well">
+        <label>
+            <input type="radio" value="1" name="q4-radio" ng-model="a4">
+            A List can only contain unique values. A Set can contain duplicates.
+        </label>
+    </div>
+    <div class="radio well">
+        <label>
+            <input type="radio" value="2" name="q4-radio" ng-model="a4">
+            A Set is a key, value collection whereas a List is a single item collection.
+        </label>
+    </div>
+    <div class="radio well">
+        <label>
+            <input type="radio" value="3" name="q4-radio" ng-model="a4">
+            A list can contain duplicates. A set can only contain unique values.
+        </label>
+    </div>
+    <div class="radio well">
+        <label>
+            <input type="radio" name="q4-radio" value="4" ng-model="a4">
+            A list can only contain primitive data types. A set can contain any Object type.
+        </label>
+    </div>
+    <div class="row">
+        <a ui-sref="form.part-three" class="btn btn-primary ui-previous">
+            <span class="glyphicon glyphicon-circle-arrow-left"></span>
+            Back
+        </a>
+        <button type="button" id="q4" class="btn btn-default" ng-click="checkAnswer($event, 'q4', a4)">Check Answer</button>
+        <a ui-sref="form.part-five" class="btn btn-primary">Next
+            <span class="glyphicon glyphicon-circle-arrow-right"></span>
+        </a>
+    </div>
+</section>

@@ -1,0 +1,68 @@
+<div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+        <div id="form-container">
+            <div class="page-header text-center">
+                <h2>Senior Web Developer Quiz</h2>
+
+                <!--the links to our nested states -->
+                <!-- add the active class if the state matches the ui-sref -->
+                <div id="status-buttons" class="text-center">
+                    <a ui-sref-active="active" ui-sref=".part-one">Level 1</a>
+                    <a ui-sref-active="active" ui-sref=".part-two">Level 2</a>
+                    <a ui-sref-active="active" ui-sref=".part-three">Level 3</a>
+                    <a ui-sref-active="active" ui-sref=".part-four">Level 4</a>
+                    <a ui-sref-active="active" ui-sref=".part-five">Level 5</a>
+                </div>
+            </div>
+            <article id="quiz-form">
+                <!--nested view -->
+                <div id="form-views" ui-view>
+                    <div class="text-center">
+                        <a ui-sref="form.part-one" class="btn btn-lg btn-default btn-primary">Start Quiz!</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</div>
+<section id="score-modal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content text-center">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h1>Here are your results!</h1>
+            </div>
+            <div class="modal-body">
+                <p>You received a score of: {{quiz.score()}}%</p>
+                <div id="score-result">
+                    <p>You have <br><strong>{{quiz.score() >= 80 ? 'Passed' : 'Failed'}}!</strong></p>
+                </div>
+                <div class="row">
+                    <ul class="list-inline">
+                        <li>
+                            <a social-facebook class="btn btn-facebook">
+                                <i class="fa fa-facebook-f"></i>&nbsp;Share
+                            </a>
+                        </li>
+                        <li>
+                            <a social-twitter class="btn btn-twitter">
+                                <i class="fa fa-twitter"></i>&nbsp;Share
+                            </a>
+                        </li>
+                        <li>
+                            <a social-gplus class="btn btn-google">
+                                <i class="fa fa-google-plus">&nbsp;Share</i>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</section>
