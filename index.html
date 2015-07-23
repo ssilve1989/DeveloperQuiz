@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="angular, javascript, heroku, quiz, interactive, bootstrap, ui-router">
+    <meta property="og:url" content="https://developer-quiz.herokuapp.com">
+    <meta property="og:title" content="Developer Quiz">
+    <meta property="og:description" content="Interactive Quiz implemented using AngularJS">
     <title>Developer Quiz</title>
     <base href="/">
     <!-- build:css styles/vendor.css -->
@@ -81,11 +84,15 @@
         ga('create', 'UA-62410211-2', 'auto');
         ga('send', 'pageview');
 
-        $('#social-networks').find('a').click(function(event){
+        $('#social-networks').find('a').click(function(){
             try{
                 var network = $(this).data().target;
                 ga('send', 'event', 'social-view', network);
             }catch(e){}
+        });
+
+        $('#score-modal').find('a').click(function(){
+            ga('send', 'event', 'shared', 'Shared on Social Media');
         });
     </script>
 </body>

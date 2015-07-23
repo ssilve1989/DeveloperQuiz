@@ -55,7 +55,7 @@ gulp.task('clean', function(){
 gulp.task('usemin', ['clean'], function(){
 	return gulp.src('./index.html')
 		.pipe(usemin({
-			css : [minifyCss(), 'concat'],
+			css : [minifyCss(), 'concat', rev()],
 			html : [minifyHtml({empty:true})],
 			js : [uglify(), rev()],
 			inlinejs : [uglify()],
